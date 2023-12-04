@@ -1,0 +1,43 @@
+1. início
+
+2. inteiro : codDaCidade, qtddTotalAcidentes, numero, qtddCidades;
+3. inteiro : qtddCidades2000 = 0;
+4.inteiro : soma = 0;
+5. inteiro : media = 0;
+6. inteiro : somaMenos2000 = 0;
+7. inteiro : mediaMenos2000 = 0;
+8. inteiro : qtddVeiculosPasseio = 0;
+9. inteiro : menor_indice_acidentes = 0;
+10. inteiro : maior_indice_acidentes = 0;
+11. inteiro : codDaCidadeMenor = 0;
+12. inteiro : codDaCidadeMaior = 0;
+13. repita
+    a. escreva("Insira o Codigo da Cidade: ");
+    b. leia(codDaCidade);
+    c. escreva("Insira numero veiculos de passeio:");
+    d. leia(qtddVeiculosPasseio);
+    e. escreva("Insira numero acidentes:");
+    f. leia(codDaCidadeqtddTotalAcidentes);
+    g. se(qtddTotalAcidentes > maior_indice_acidentes ou maior_indice_acidentes = 0) então
+        i. codDaCidadeMaior = codDaCidade;
+        ii. maior_indice_acidentes = qtddTotalAcidentes;
+    h. fimse
+    i. qtddCidades=qtddCidades+1;
+    j. soma+=qtddVeiculosPasseio;
+    k. media = soma / qtddCidades;
+    l. se(qtddVeiculosPasseio < 2000) então 
+        i. qtddCidades2000+=1;
+        ii. somaMenos2000 += qtddTotalAcidentes;
+    m. fimse
+    n. mediaMenos2000 = somaMenos2000 / qtddCidades2000;
+    o. escreva ("Há dados de mais alguma cidade para acrescentar? 1 = Sim 2 = Não");
+    p. leia ("%d", &numero);
+14. até (numero <> 1);
+escreva("\n O maior índice de acidentes pertence a cidade %i.", codDaCidadeMaior);
+escreva("Que possui índice %i de acidentes de trânsito\n", maior_indice_acidentes);
+escreva("\n O menor índice de acidentes pertence a cidade %i.", codDaCidadeMenor);
+escreva("Que possui índice %i de acidentes de trânsito\n", menor_indice_acidentes);
+escreva("A média de veículos das cidades participantes do estudo é %i\n", media);
+escreva("A média de acidentes de trânsito nas cidades com menos de 2000 Veículos de Passeio é %i\n", mediaMenos2000);
+17. fim
+
